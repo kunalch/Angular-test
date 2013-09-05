@@ -1,0 +1,16 @@
+<div class="wrapper" ng-controller="addCtrl">
+	  <div class="left-panel">
+	  	<ul>
+			 <li ng-repeat="item in items">
+				<span data-ng-bind="item.value">{{item.value}}</span>
+				<a ng-click="delete(item)">X</a>
+			</li>
+	  	</ul>		
+	  </div>
+	  <div class="right-panel" >
+	  	 <form ng-submit="add()">
+				<input type="text" ng-model="addItem" size="30" placeholder="add new todo here">
+				<input  type="submit" value="add">
+		</form>
+  </div>
+</div>
